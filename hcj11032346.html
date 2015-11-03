@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function changeImage()
+    {
+        element=document.getElementById('myimage')
+        if (element.src.match("wucheng3"))
+        {
+            element.src="wucheng.png";
+        }
+        else
+        {
+            element.src="wucheng3.png";
+        }
+    }
+</script>
+
+<img id="myimage" onclick="changeImage()" src="wucheng.png" width="300" height="300">
+
+<p>changeImage</p>
+</body>
+</html>
