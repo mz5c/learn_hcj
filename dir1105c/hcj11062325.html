@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        input{
+            width:100px;
+            height:50px;
+            font-size:12px;
+            font-weight:bold;
+            background:#1b6d85;
+            border:double red;
+        }
+    </style>
+    <script>
+        function myfunc(){
+            var ct = new Date();
+            with(ct){
+                var sd = "now is ";
+                sd += getYear()+"year";
+                sd += (getMonth()+1)+"month";
+                sd += getDate()+"day ";
+                sd += getHours()+":";
+                sd += getMinutes()+":";
+                sd += getSeconds();
+                alert(sd);
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="hello" onclick="myfunc()"><br>
+<button type="button">hello</button>
+</body>
+</html>
