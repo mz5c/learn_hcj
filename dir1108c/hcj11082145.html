@@ -12,7 +12,7 @@
 <body>
 <table align="center" width="500" border="1" cellpadding="2" cellspacing="0">
     <caption align="center"><h2>LAMP学员基本信息</h2></caption>
-    <form action="hcj11082145.html" method="post">
+    <form action="form.php" method="post">
         <tr>
             <th>姓名：</th>
             <td><input type="text" name="usrname" size="20"></td>
@@ -41,10 +41,10 @@
         <tr>
             <th>选修课程：</th>
             <td>
-                <input type="checkbox" name="course" value="1">Linux
-                <input type="checkbox" name="course" value="2">Apache
-                <input type="checkbox" name="course" value="3">MySQL
-                <input type="checkbox" name="course" value="4">PHP
+                <input type="checkbox" name="course[]" value="1">Linux
+                <input type="checkbox" name="course[]" value="2">Apache
+                <input type="checkbox" name="course[]" value="3">MySQL
+                <input type="checkbox" name="course[]" value="4">PHP
             </td>
         </tr>
         <tr>
