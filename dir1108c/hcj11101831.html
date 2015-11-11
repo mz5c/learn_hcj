@@ -3,16 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>test</title>
-    <script src="../../jquery-2.1.4.min.js"></script>
+    <script src="/learn_hcj/dir1108c/dirtest/jquery-2.1.4.min.js"></script>
     <script>
         $(document).ready(function () {
            $("h1").click(function () {
                $(this).hide();
            });
+            $("button").click(function(){
+                $("h1").show();
+            });
         });
     </script>
 </head>
 <body>
+<center>
 <h1>test</h1>
+<button type="button">click</button>
+</center>
 </body>
 </html>
