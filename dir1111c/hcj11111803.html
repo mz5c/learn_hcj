@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript</title>
+    <script src="../jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           $("#click").click(function(){
+               $("p").toggle();
+           });
+        });
+        function rffunc(){
+            window.location.reload();
+        }
+        function funcone(){
+            document.write("<h1>test</h1>");
+        }
+        function functwo(){
+            window.location.reload();
+        }
+        setTimeout('funcone()',5000);
+        setInterval('functwo()',8000)
+    </script>
+</head>
+<div align="center">
+    <p>JavaScript</p>
+    <input type="button" id="click" value="click">
+    <input type="button" value="refresh" onclick="rffunc()">
+</div>
+</body>
+</html>
