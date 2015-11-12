@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div align="center">
+    <h1>test</h1>
+    <input type="text" name="test" value="1">
+    <input type="text" name="test" value="2">
+    <input type="text" name="test" value="3">
+    <input type="button" onclick="myreset()" value="reset">
+</div>
+<script>
+    function myreset(){
+        var test = document.getElementsByName('test');
+        for(var i =0;i<test.length;i++){
+            test[i].value = i+1;
+        }
+        alert('test');
+    }
+</script>
+</body>
+</html>
