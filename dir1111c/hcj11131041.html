@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<div align="center">
+    <h1>test</h1>
+    <input type="button" value="click_a" onclick="a()">
+    <input type="button" value="click_b" onclick="b()">
+    <p style="background-color: #999999;width: 20%;color: #333333;">test</p>
+    <a href="#tips">to tips</a>
+    <xmp>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </xmp>
+    <a id="tips">tips</a>
+</div>
+<script>
+    function a(){
+        var res = prompt("input something","");
+        if(res == ""){
+            alert('you input : empty');
+        }else if(res == null){
+            alert('you input : null');
+        }else{
+            alert('you input : '+res);
+        }
+    }
+    function b(){
+        var res = confirm("have launch");
+        if(res){
+            alert('yes');
+        }else{
+            alert('no');
+        }
+    }
+</script>
+</body>
+</html>
