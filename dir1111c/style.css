@@ -1,0 +1,8 @@
+body {
+    background: white;
+    font: 12px Arial,宋体;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color:#888;
+}
