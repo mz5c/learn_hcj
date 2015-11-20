@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css</title>
+    <style>
+        [title]{
+            color: red;
+        }
+        [title=ok]{
+            color: green;
+        }
+        [title~=good]{
+            color: blue;
+        }
+        input[type="text"]
+        {
+            width:150px;
+            display:block;
+            margin-bottom:10px;
+            background-color:yellow;
+        }
+        input[type="button"]
+        {
+            width:120px;
+            margin-left:35px;
+            display:block;
+        }
+    </style>
+</head>
+<body>
+<p title="hello">hello world</p>
+<p title="ok">ok</p>
+<p title="good morning">good morning</p>
+<p title="good">good</p>
+name:<input type="text">
+<input type="button" value="click">
+</body>
+</html>
