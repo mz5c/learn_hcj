@@ -4,11 +4,29 @@
     <meta charset="UTF-8">
     <title>ajax</title>
     <script src="../jquery-2.1.4.min.js"></script>
+    <style>
+        .bigp{
+            font-size: 120%;
+            color: red;
+        }
+        .bgc{
+            background: #333333;
+        }
+        .otherp{
+            font-size: 150%;
+            color: green;
+        }
+    </style>
 </head>
 <body>
 <div style="text-align: center;">
+    <h1>test------------------------------test</h1>
+    <p id="first" class="bgc">first</p>
+    <p id="second" class="otherp">second</p>
+    <p id="third">third</p>
     text:<input id="rico" type="text">num:<input id="rand" type="text">
-    <input type="button" onclick="callAjax()" value="test">
+    <input type="button" onclick="callAjax()" value="test"><br>
+    <img src="../wucheng.png" id="myimg" width="300" height="300">
 </div>
 <script>
     function callAjax(){
@@ -26,6 +44,17 @@
                     alert('success');
                     $('#rico').val(o.msg);
                     $('#rand').val(o.num);
+                    $('p#first').addClass('bigp');
+                    $('p#second').toggleClass('otherp');
+                    $('img#myimg').attr('title','wucheng');
+                    $('p#third').html("hello <b>rico</b>");
+                    $('h1').empty();
+                    if($('p#first').hasClass('bigp')){
+                        $('p#first').removeClass('bgc');
+                    }
+                    if(o.num >5){
+                        $('img#myimg').removeAttr('title');
+                    }
                 }
             },
             error: function () {
