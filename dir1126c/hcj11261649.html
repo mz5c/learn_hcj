@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="../jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div style="text-align: center;">
+    text:<input id="rico" type="text">num:<input id="rand" type="text">
+    <input type="button" onclick="callAjax()" value="test">
+</div>
+<script>
+    function callAjax(){
+        $.ajax({
+            url:'ajaxtest.php',
+            cache:false,
+            beforeSend: function () {
+                alert('start');
+            },
+            type:'post',
+            timeout:1000,
+            data:{name:$('#rico').val(),isAjax:Math.random()*10},
+            success: function (o) {
+                if(o.res == 'success'){
+                    alert('success');
+                    $('#rico').val(o.msg);
+                    $('#rand').val(o.num);
+                }
+            },
+            error: function () {
+                alert('call failed');
+            },
+            complete: function () {
+                alert('end');
+            },
+            dataType:'json'
+        });
+    }
+</script>
+</body>
+</html>
