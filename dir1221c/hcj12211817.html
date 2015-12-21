@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax</title>
+    <script src="../jquery-2.1.4.min.js"></script>
+    <script src="ajaxtest.js"></script>
+    <style>
+        .bigp{
+            font-size: 120%;
+            color: red;
+        }
+        .bgc{
+            background: #333333;
+        }
+        .otherp{
+            font-size: 150%;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: center;">
+    first num : <input id="first" type="text" value="0"><br>
+    sub : <select id="sub">
+    <option value="+">+</option>
+    <option value="-">+</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+</select><br>
+    second num : <input id="second" type="text" value="0"><br>
+    <input type="button" value="calculate" onclick="callAjax()"><br>
+    result : <input id="res">
+</div>
+</body>
+</html>
