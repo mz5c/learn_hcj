@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <title>AngularJS</title>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl">
+    名字: <input ng-model="name"><br>
+    age: <input ng-model="age">
+    <h1>你输入了: {{name + ":" + age}}</h1>
+</div>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope) {
+        $scope.name = "John Doe";
+        $scope.age = 12;
+    });
+</script>
+
+<p>修改输入框的值，标题的名字也会相应修改。</p>
+</body>
+</html>

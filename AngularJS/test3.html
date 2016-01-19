@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+    <title>AngularJS</title>
+</head>
+<body>
+<div ng-app="" ng-init="a='rico';names=['J','H','K']">
+    <p>input</p>
+    <p>name:<input type="text" ng-model="a"></p>
+    <p>output:{{a}}</p>
+    <p>ng-repeat</p>
+    <ol>
+        <li ng-repeat="x in names">
+            {{x}}
+        </li>
+    </ol>
+</div>
+</body>
+</html>
