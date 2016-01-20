@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/learn_hcj/jquery-2.1.4.min.js"></script>
+    <title>jquery</title>
+</head>
+<body>
+<script>
+    $(document).ready(function(){
+        $("p").dblclick(function(){
+            var a = $(this).html();
+            alert(a);
+            $(this).fadeOut();
+        });
+        $("button").click(function(){
+            $("p").toggle();
+        });
+    });
+</script>
+<p>如果你点我，我就会消失。</p>
+<p>继续点我!</p>
+<p>接着点我!</p>
+<button type="button">toggle</button>
+</body>
+</html>
