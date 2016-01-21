@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="/learn_hcj/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('#a').fadeToggle(1000,function(){
+                    alert('hello');
+                });
+                $('#b').fadeTo('slow',0);
+            });
+        });
+    </script>
+</head>
+<body>
+<button>click</button>
+<p id="a">hahahahhahaha</p>
+<p id="b">bbbbbbbbbbbbbbbbb</p>
+</body>
+</html>

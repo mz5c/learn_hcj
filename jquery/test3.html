@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+    <script src="/learn_hcj/jquery-2.1.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#a').click(function(){
+                $(this).fadeOut(2000, function () {
+                    $('#b').html('hello world');
+                });
+            });
+        });
+        /*setInterval('hello()',5000);
+        function hello(){
+            alert('hello');
+        }*/
+    </script>
+</head>
+<body>
+<p id="a">test</p>
+<p id="b">bbb</p>
+</body>
+</html>

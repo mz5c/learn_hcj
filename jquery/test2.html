@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="/learn_hcj/jquery-2.1.4.min.js"></script>
+    <title>jquery</title>
+    <script>
+        $(document).ready(function(){
+            $('#p1').mouseenter(function(){
+                alert('hello');
+            });
+            $('#p1').mouseleave(function () {
+                alert('bye');
+            });
+            $('p').mousedown(function(){
+                alert($(this).html());
+            });
+            $('#t1').hover(function(){alert('a')},function(){alert('b')});
+            $('input').focus(function(){
+                $(this).css('background-color','#cccccc');
+            });
+            $('input').blur(function(){
+                $(this).css('background-color','#ffffff');
+                var a = $(this).val();
+                alert(typeof a);
+                if(a == ''){
+                    $(this).val('hello');
+                }
+            });
+            $('input').val('rico');
+        });
+    </script>
+</head>
+<body>
+<h1 id="p1" style="width: 50px;">nice</h1>
+<p>do not touch me</p>
+<p>why</p>
+<p>no</p>
+<p id="t1" style="width: 50px;">ttttttttt</p>
+input:<input type="text">
+</body>
+</html>
