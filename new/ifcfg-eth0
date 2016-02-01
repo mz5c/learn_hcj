@@ -1,0 +1,9 @@
+vim /etc/sysconfig/network-scripts/ifcfg-eth0
+
+DEVICE=eth0
+#HWADDR=08:00:27:FB:6B:16
+TYPE=Ethernet
+#UUID=b5f62e43-7d7e-435a-8368-c8a6e17641c5
+ONBOOT=yes
+#NM_CONTROLLED=yes
+BOOTPROTO=dhcp
