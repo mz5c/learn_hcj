@@ -1,0 +1,13 @@
+.content{
+    margin: 200px auto;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    border: 1px solid grey;
+    overflow: hidden;
+}
+.img_content{
+    width: 120px;
+    height: 120px;
+    margin-left: 100px;
+}

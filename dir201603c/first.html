@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link href="test.css" rel="stylesheet" type="text/css">
+    <script src="../jquery-2.1.4.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="img_content">
+        <img src="../wucheng.png">
+    </div>
+    <button id="btn">click</button>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            $('.img_content').css('margin-left','300px');
+        });
+        $('#btn').dblclick(function () {
+            $('.img_content').find('img').remove();
+        });
+    });
+</script>
+</body>
+</html>
