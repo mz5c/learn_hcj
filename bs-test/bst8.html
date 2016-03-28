@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-3.3.5-dist/jquery-2.1.4.min.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>form test</h1>
+    <form role="form" method="post" action="form.php">
+        <div class="form-group">
+            <label>姓名</label>
+            <input type="text" name="name" class="form-control" placeholder="输入您的姓名">
+        </div>
+        <div class="form-group">
+            <label>简介</label>
+            <textarea class="form-control" name="prof" rows="3" placeholder="输入您的简介"></textarea>
+        </div>
+        <div class="form-group">
+            <label>兴趣</label>
+            <div class="checkbox">
+                <label><input type="checkbox" name="interesting[]" value="兴趣1">兴趣 1</label>
+                <label><input type="checkbox" name="interesting[]" value="兴趣2">兴趣 2</label>
+                <label><input type="checkbox" name="interesting[]" value="兴趣3">兴趣 3</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>性别</label>
+            <div class="radio">
+                <label><input type="radio" name="sex" value="男" checked>男</label>
+                <label><input type="radio" name="sex" value="女">女</label>
+                <label><input type="radio" name="sex" value="保密">保密</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>年龄</label>
+            <select class="form-control" name="age">
+                <option value="" selected>请选择</option>
+                <option value="10-">10-</option>
+                <option value="10-20">10-20</option>
+                <option value="20-30">20-30</option>
+                <option value="30-40">30-40</option>
+                <option value="40+">40+</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>最喜欢的数字</label>
+            <select multiple class="form-control" name="favsnum">
+                <option value="0" selected>0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-default">submit</button>
+        <button type="reset" class="btn btn-default">reset</button>
+    </form>
+    <div style="margin: 10px auto;">
+        <!-- 标准的按钮 -->
+        <button type="button" class="btn btn-default" id="btn1">默认按钮</button>
+
+        <!-- 提供额外的视觉效果，标识一组按钮中的原始动作 -->
+        <button type="button" class="btn btn-primary" id="btn2">原始按钮</button>
+
+        <!-- 表示一个成功的或积极的动作 -->
+        <button type="button" class="btn btn-success" id="btn3">成功按钮</button>
+
+        <!-- 信息警告消息的上下文按钮 -->
+        <button type="button" class="btn btn-info" id="btn4">信息按钮</button>
+
+        <!-- 表示应谨慎采取的动作 -->
+        <button type="button" class="btn btn-warning" id="btn5">警告按钮</button>
+
+        <!-- 表示一个危险的或潜在的负面动作 -->
+        <button type="button" class="btn btn-danger" id="btn6">危险按钮</button>
+
+        <!-- 并不强调是一个按钮，看起来像一个链接，但同时保持按钮的行为 -->
+        <button type="button" class="btn btn-link" id="btn7">链接按钮</button>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('#btn1').click(function () {
+            $('[name="name"]').val('hello world');
+        });
+        $('#btn2').click(function () {
+            $('[name="prof"]').val('who am I');
+        });
+        $('#btn3').click(function () {
+            var a = new Array();
+            $('[name="interesting[]"]').each(function () {
+                if($(this).prop('checked')){
+                    a.push($(this).val());
+                }
+            });
+            for(key in a){
+                alert(a[key]);
+            }
+        });
+        $('#btn4').click(function () {
+            var b = [1,'kdsjf',2,3];
+            alert(b);
+        });
+    });
+</script>
+</body>
+</html>

@@ -13,11 +13,100 @@
 <div class="container">
     <p><code>&lt;header&gt;</code> 作为内联元素被包围。</p>
     <p>如果需要把代码显示为一个独立的块元素，请使用 &lt;pre&gt; 标签：</p>
-<pre>
-  &lt;article&gt;
-    &lt;h1&gt;Article Heading&lt;/h1&gt;
-  &lt;/article&gt;
-</pre>
+    <pre>
+        &lt;article&gt;
+            &lt;h1&gt;Article Heading&lt;/h1&gt;
+        &lt;/article&gt;
+    </pre>
+
+    <table class="table table-striped">
+        <caption>基本的表格布局</caption>
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>城市</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Tanmay</th>
+            <th>Bangalore</th>
+        </tr>
+        <tr>
+            <th>Sachin</th>
+            <th>Mumbai</th>
+        </tr>
+        <tr>
+            <th>xxx</th>
+            <th>yyy</th>
+        </tr>
+        </tbody>
+    </table>
+    <table class="table table-hover">
+        <caption>基本的表格布局</caption>
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>城市</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th>Tanmay</th>
+            <th>Bangalore</th>
+        </tr>
+        <tr>
+            <th>Sachin</th>
+            <th>Mumbai</th>
+        </tr>
+        <tr>
+            <th>xxx</th>
+            <th>yyy</th>
+        </tr>
+        </tbody>
+    </table>
+    <div class="table-responsive">
+        <table class="table">
+            <caption>响应式表格布局</caption>
+            <thead>
+            <tr>
+                <th>产品</th>
+                <th>付款日期</th>
+                <th>状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>产品1</td>
+                <td>23/11/2013</td>
+                <td>待发货</td>
+            </tr>
+            <tr>
+                <td>产品2</td>
+                <td>10/11/2013</td>
+                <td>发货中</td>
+            </tr>
+            <tr>
+                <td>产品3</td>
+                <td>20/10/2013</td>
+                <td>待确认</td>
+            </tr>
+            <tr>
+                <td>产品4</td>
+                <td>20/10/2013</td>
+                <td>已退货</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <button type="button" class="btn btn-danger">back</button>
+    </div>
 </div>
+<script>
+    $('button.btn.btn-danger').click(function () {
+        history.back();
+    });
+</script>
 </body>
 </html>
