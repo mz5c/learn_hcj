@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>bootstrap</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-3.3.5-dist/jquery-2.1.4.min.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>hello world</h1>
+    <h2>创建模态框（Modal）</h2>
+    <!-- 按钮触发模态框 -->
+    <button class="btn btn-primary btn-lg" data-toggle="modal"
+            data-target="#myModal">
+        开始演示模态框
+    </button>
+
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        模态框（Modal）标题
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    在这里添加一些文本
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal">关闭
+                    </button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                        提交更改
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <button type="button" class="btn btn-default" data-toggle="tooltip"
+            data-placement="right" title="顶部的 Tooltip">
+        顶部的 Tooltip
+    </button>
+</div>
+<script>
+    $(function () { $("[data-toggle='tooltip']").tooltip(); });
+</script>
+<div class="container" style="padding: 100px 50px 10px;" >
+    <button type="button" class="btn btn-default popover-show"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="left"
+            data-content="左侧的 Popover 中的一些内容 —— show 方法">
+        左侧的 Popover
+    </button>
+    <button type="button" class="btn btn-primary popover-hide"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="top"
+            data-content="顶部的 Popover 中的一些内容 —— hide 方法">
+        顶部的 Popover
+    </button>
+    <button type="button" class="btn btn-success popover-destroy"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="bottom"
+            data-content="底部的 Popover 中的一些内容 —— destroy 方法">
+        底部的 Popover
+    </button>
+    <button type="button" class="btn btn-warning popover-toggle"
+            title="Popover title" data-container="body"
+            data-toggle="popover" data-placement="right"
+            data-content="右侧的 Popover 中的一些内容 —— toggle 方法">
+        右侧的 Popover
+    </button><br><br><br><br><br><br>
+    <p class="popover-options">
+        <a href="#" type="button" class="btn btn-warning" title="<h2>Title</h2>"
+           data-container="body" data-toggle="popover" data-content="
+         <h4>Popover 中的一些内容 —— options 方法</h4>">
+            Popover
+        </a>
+    </p>
+    <script>
+        $(function () { $('.popover-show').popover('show');});
+        $(function () { $('.popover-hide').popover('hide');});
+        $(function () { $('.popover-destroy').popover('destroy');});
+        $(function () { $('.popover-toggle').popover('toggle');});
+        $(function () { $(".popover-options a").popover({html : true });});
+    </script>
+</div>
+</body>
+</html>
