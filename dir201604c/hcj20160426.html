@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        var str = '12345';
+        var abc = str.split('').map(function(x){
+            return x*1;
+        });
+        alert(abc.reduce(function(x,y){
+            return x*10+y;
+        }));
+        var arr = [10,1,20,2];
+        alert(arr.sort(function(x,y){
+            if(x<y){
+                return 1;
+            }else{
+                return 0;
+            }
+        }));
+    </script>
+</head>
+<body>
+<h1>test</h1>
+</body>
+</html>
