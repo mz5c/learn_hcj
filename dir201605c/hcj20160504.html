@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script>
+        var zero = function (f) {
+            return function (x) {
+                return x;
+            }
+        }
+        var one = function (f) {
+            return function (x) {
+                return f(x);
+            }
+        }
+        function add(n,m){
+            return function (f) {
+                return function (x) {
+                    return m(f)(n(f)(x))
+                }
+            }
+        }
+        var two = add(one,one);
+        (one(function () {
+            console.log('print 3 times');
+        }))();
+    </script>
+</head>
+<body>
+<h1>test</h1>
+</body>
+</html>
