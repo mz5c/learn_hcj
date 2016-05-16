@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TouchSlide</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../swiper.min.css">
+    <script src="../jquery-2.1.4.min.js"></script>
+    <script src="../swiper.min.js"></script>
+    <script src="../TouchSlide.1.1.js"></script>
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <style>
+        li{
+            list-style: none;
+        }
+        li.on{
+            background-color: dodgerblue;
+            color: black;
+        }
+        #banner_icon ul li{
+            display: inline-block;
+            width: 15%;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Hello, world!</h1>
+    <div id="index_banner_slid">
+        <p>test</p>
+        <div id="onShow">
+            <ul>
+                <li>aaa</li>
+                <li>bbb</li>
+                <li>ccc</li>
+                <li>ddd</li>
+                <li>eee</li>
+            </ul>
+        </div>
+        <div id="banner_icon">
+            <ul></ul>
+        </div>
+    </div>
+    <p>kdjf</p>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="display: inline-block;">
+                <p>aaa</p>
+            </div>
+            <div class="swiper-slide" style="display: inline-block;">
+                <p>bbb</p>
+            </div>
+            <div class="swiper-slide" style="display: inline-block;">
+                <p>ccc</p>
+            </div>
+            <div class="swiper-slide" style="display: inline-block;">
+                <p>ddd</p>
+            </div>
+            <div class="swiper-slide" style="display: inline-block;">
+                <p>eee</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    TouchSlide({
+        slideCell:"#index_banner_slid",
+        titCell:"#banner_icon ul",
+        mainCell:"#onShow ul",
+        effect:"leftLoop",
+        autoPage:true,
+        autoPlay:true,
+        interTime:3000
+    });
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        initialSlide: 2,
+        speed: 2000,
+        autoplay: 2000,
+        autoplayDisableOnInteraction: false,
+        grabCursor: true,
+        paginationClickable: true,
+        spaceBetween: 0,
+        freeMode: true
+    });
+</script>
+</body>
+</html>
