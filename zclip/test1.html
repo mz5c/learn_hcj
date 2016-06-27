@@ -3,8 +3,8 @@
 <head>
 <title>Zero Clipboard Test</title>
 <meta charset="utf-8">
-    <script type="text/javascript" src="ZeroClipboard.js"></script>
     <script type="text/javascript" src="../jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="ZeroClipboard.js"></script>
 </head>
 <body>
 <!-- 
@@ -12,6 +12,7 @@
 	1.data-clipboard-target 输入要复制的对象的ID
 -->
 <button id="d_clip_button" class="my_clip_button" data-clipboard-target="hello"><b>复制到剪贴板</b></button>
+<button id="d_clip_budsfdtton" class="my_clip_button" data-clipboard-target="hello"><b>复制到剪贴板</b></button>
 <button onclick="abc()">click</button>
 <br/>
 <textarea id="fe_text" cols="50" rows="3">输入需要复制的内容</textarea>
@@ -20,7 +21,7 @@
 </html>
 <script type="text/javascript">
 // 定义一个新的复制对象
-var clip = new ZeroClipboard( $('#d_clip_button'), {
+var clip = new ZeroClipboard( $('.my_clip_button'), {
   moviePath: "ZeroClipboard.swf"
 } );
 
