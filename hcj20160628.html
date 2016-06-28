@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="jquery.ellipsis.js"></script>
+    <title>jquery.ellipsis.js</title>
+</head>
+<body>
+<div style="width: 60%;height: 100%;margin: 0px auto;text-align: center;border: 1px dotted grey;">
+    <p id="test">多出的内容都将被隐藏：hahahahahahahahaha</p>
+</div>
+<script>
+    $(function () {
+        $('#test').wordLimit(10);
+    });
+</script>
+</body>
+</html>
