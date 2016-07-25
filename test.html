@@ -7,15 +7,15 @@
     <script type="text/javascript" src="qrcode.js"></script>
 </head>
 <body>
-<div id="test"></div><button onclick="genQrcode()">click</button>
+<div id="test">sdf</div><button onclick="genQrcode()">click</button>
 <script>
     function genQrcode(){
         $('#test').empty();
         var qrcode = new QRCode(document.getElementById('test'), {
-            width : 150,//设置宽高
-            height : 150
+            width : 250,//设置宽高
+            height : 250
         });
-        qrcode.makeCode("http://www.baidu.com");
+        qrcode.makeCode("http://www.iamrico.xyz:8081/");
     }
 </script>
 </body>
