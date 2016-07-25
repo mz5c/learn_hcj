@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            html2canvas($("#myCanvas"), {
+                onrendered: function(canvas) {
+                    $('#down_button').attr('href', canvas.toDataURL());
+                    $('#down_button').attr('download', 'myjobdeer.png');
+                    //$('#down_button').css('display','inline-block');
+                    var html_canvas = canvas.toDataURL();
+                    alert(html_canvas);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="myCanvas" style="width: 100px; height: 100px; background-color: cornflowerblue;">
+    <h1>hello</h1>
+    <p>test</p>
+</div>
+<hr>
+<br/>
+<a id="down_button">下载</a>
+</body>
+</html>

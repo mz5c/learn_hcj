@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <title>test</title>
     <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="qrcode.js"></script>
+    <script type="text/javascript" src="new_qrcode.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </head>
 <body>
-<div id="test">sdf</div><button onclick="genQrcode()">click</button>
+<div id="xxxxx" style="width: 250px;">
+    <div id="test">sdf</div><button onclick="genQrcode()">click</button>
+    <p id="gus"></p>
+    <a id="down_button">下载</a>
+    <a href="hcj20160628.html" download="aaa.html">xiazai</a>
+</div>
 <script>
     function genQrcode(){
         $('#test').empty();
@@ -15,8 +21,21 @@
             width : 250,//设置宽高
             height : 250
         });
-        qrcode.makeCode("http://www.iamrico.xyz:8081/");
+        qrcode.makeCode("http://www.baidu.com");
     }
+    $(function () {
+        genQrcode();
+        $test = $('#test');
+        html2canvas($test, {
+            onrendered: function(canvas) {
+                $('#down_button').attr('href', canvas.toDataURL());
+                $('#down_button').attr('download', 'myjobdeer.png');
+                //$('#down_button').css('display','inline-block');
+                var html_canvas = canvas.toDataURL();
+                alert(html_canvas);
+            }
+        });
+    })
 </script>
 </body>
 </html>
