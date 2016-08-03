@@ -13,19 +13,42 @@
                     $('#down_button').attr('download', 'myjobdeer.png');
                     //$('#down_button').css('display','inline-block');
                     var html_canvas = canvas.toDataURL();
-                    alert(html_canvas);
+                    $('#xxx').attr('src',html_canvas);
                 }
+            });
+            $('#xxxxx').click(function () {
+                $.ajax({
+                    url:'http://120.26.99.225:8081/learn_php/pt.php',
+                    type:'get',
+                    dataType:'json',
+                    success: function (res) {
+                        console.log(res);
+                    },
+                    error: function (res) {
+                        alert('error');
+                        console.log(res);
+                    }
+                });
             });
         });
     </script>
 </head>
 <body>
-<div id="myCanvas" style="width: 100px; height: 100px; background-color: cornflowerblue;">
-    <h1>hello</h1>
+<div id="myCanvas" style="width: 100px; height: 100px; background-color: cornflowerblue;border: 1px solid red;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;;">
+    <h1 style="display: none;">hello</h1>
     <p>test</p>
+    <div style="width: 50px; height: 50px; background:url(avatar.jpg);background-color: red;border: 1px solid blue;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;;">
+
+    </div>
 </div>
 <hr>
 <br/>
 <a id="down_button">下载</a>
+<img id="xxx" style="display: none;">
+<button onclick="$('#xxx').toggle()">click</button>
+<p id="xxxxx">xxxxx</p>
+<img style="width: 100px;height: 100px;" src="avatar.jpg">
+<img style="width: 100px;height: 100px;" src="avatar.jpg">
+<img style="width: 100px;height: 100px;" src="avatar.jpg">
 </body>
 </html>

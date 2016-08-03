@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <title>test</title>
     <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="new_qrcode.js"></script>
+    <script type="text/javascript" src="qrcode.js"></script>
     <script type="text/javascript" src="http://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 </head>
 <body>
 <div id="xxxxx" style="width: 250px;">
     <div id="test">sdf</div><button onclick="genQrcode()">click</button>
-    <p id="gus"></p>
     <a id="down_button">下载</a>
     <a href="hcj20160628.html" download="aaa.html">xiazai</a>
 </div>
@@ -32,7 +31,7 @@
                 $('#down_button').attr('download', 'myjobdeer.png');
                 //$('#down_button').css('display','inline-block');
                 var html_canvas = canvas.toDataURL();
-                alert(html_canvas);
+                //alert(html_canvas);
             }
         });
     })
