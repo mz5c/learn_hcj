@@ -12,6 +12,17 @@
     <div id="test">sdf</div><button onclick="genQrcode()">click</button>
     <a id="down_button">下载</a>
     <a href="hcj20160628.html" download="aaa.html">xiazai</a>
+    <hr>
+    <ul>
+        <li>5</li>
+        <li>4</li>
+        <li>3</li>
+        <li>2</li>
+        <li>1</li>
+    </ul>
+    <button id="show">show</button>
+    <button id="add">add</button>
+    <img id="newimg" src="avatar.jpg">
 </div>
 <script>
     function genQrcode(){
@@ -34,7 +45,37 @@
                 //alert(html_canvas);
             }
         });
+        $('#add').bind('click', function () {
+            $('<li>6</li>').appendTo($('ul'));
+        });
+        $('#show').bind('click', function () {
+            alert($('ul>li').length);
+        });
     })
+</script>
+<script>
+    function convertImgToBase64(url, callback, outputFormat){
+        var canvas = document.createElement('CANVAS'),
+                ctx = canvas.getContext('2d'),
+                img = new Image;
+        img.crossOrigin = 'Anonymous';
+        img.onload = function(){
+            canvas.height = img.height;
+            canvas.width = img.width;
+            ctx.drawImage(img,0,0);
+            var dataURL = canvas.toDataURL(outputFormat || 'image/png');
+            callback.call(this, dataURL);
+            canvas = null;
+        };
+        img.src = url;
+    }
+
+
+    convertImgToBase64('http://open.weixin.qq.com/qr/code/?username=creativead', function(base64Img){
+        // Base64DataURL
+        console.log(base64Img);
+        $('#newimg').attr('src',base64Img);
+    });
 </script>
 </body>
 </html>
