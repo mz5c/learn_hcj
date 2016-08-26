@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS</title>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+<form name="myForm" ng-app="myApp" ng-controller="myCtrl">
+    Email : <input type="email" name="myAddress" ng-model="myText" required>
+    <span ng-show="myForm.myAddress.$error.email">email格式不对</span>
+    <h1>状态</h1>
+    {{ myForm.myAddress.$valid }}
+</form>
+<script>
+    var app = angular.module('myApp',[]);
+    app.controller('myCtrl', function ($scope) {
+        $scope.myText = 'lsfkjd@kdf.sdl';
+    })
+</script>
+</body>
+</html>
