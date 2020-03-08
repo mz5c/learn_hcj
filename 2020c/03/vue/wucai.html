@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>五彩斑斓的黑</title>
+    <!--<link rel="stylesheet" type="text/css" href="a.css">-->
+    <style rel="stylesheet" type="text/css">
+        @import "a.css";
+        body {
+            font-family: "Montserrat", sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: #2A3137;
+        }
+        .outer-circle {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+            border-radius: 50%;
+            animation: rotate 1.5s linear infinite;
+        }
+        .inner-circle {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 180px;
+            height: 180px;
+            background: black;
+            border-radius: 50%;
+            z-index: 9;
+        }
+        @keyframes rotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        .outer-circle span {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+            border-radius: 50%;
+        }
+        span:nth-child(1) {
+            filter: blur(5px);
+        }
+        span:nth-child(2) {
+            filter: blur(10px);
+        }
+        span:nth-child(3) {
+            filter: blur(25px);
+        }
+        span:nth-child(4) {
+            filter: blur(150px);
+        }
+    </style>
+</head>
+<body>
+<div class="outer-circle">
+    <div class="inner-circle"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="outer-circle">
+    <div class="inner-circle"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="outer-circle">
+    <div class="inner-circle"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<div class="outer-circle">
+    <div class="inner-circle"></div>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<p>hello world<a href="demo.html"> click me</a></p>
+</body>
+</html>

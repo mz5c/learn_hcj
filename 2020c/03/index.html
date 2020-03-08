@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1" cellspacing="1" >
+    <caption>hello</caption>
+    <tr>
+        <th colspan="2">111</th>
+        <th rowspan="2">222</th>
+    </tr>
+    <tr>
+        <td rowspan="2">444</td>
+        <td>555</td>
+    </tr>
+    <tr>
+        <td colspan="2">333</td>
+    </tr>
+</table>
+<p title="aaa">bbb</p>
+<a href="https://www.baidu.com" target="_blank" title="点击一下">百度一下</a>
+<a href="mailto:w11w23c58@126.com">联系我</a>
+<img src="../../2016c/avatar.jpg" title="avatar" alt="none" width="100px">
+<p>aaa</p>
+<img src="https://upload-images.jianshu.io/upload_images/6922261-76dc58eae8a771d1.png?imageMogr2/auto-orient/strip|imageView2/2/w/508/format/webp">
+<hr>
+<form action="index.html" method="get" enctype="multipart/form-data">
+    <input type="text" name="aaa" value="hello" placeholder="world">
+    <input type="radio" name="bbb" value="1">1
+    <input type="radio" name="bbb" value="2" checked>2
+    <br>
+    <input type="checkbox" name="ccc[]" value="1">1
+    <input type="checkbox" name="ccc[]" value="2">2
+    <input type="checkbox" name="ccc[]" value="3">3
+    <br>
+    <select name="ddd" multiple>
+        <option value="1">aaa</option>
+        <option value="2">vvv</option>
+        <option value="3" selected>sss</option>
+        <option value="4" selected>bbb</option>
+        <option value="5" selected>ccc</option>
+        <option value="6" selected>www</option>
+    </select>
+    <hr>
+    <textarea name="eee" rows="10" cols="10" placeholder="hello"></textarea>
+    <p style="width: 100px;overflow: hidden;text-overflow: ellipsis;">lsdkjfljlssdfsdffffffffffffkdjfl</p>
+    <input type="button" value="abc" onclick="(function a() {
+      alert(1+1);
+    })()">
+    <input type="color" value="1">
+    <input type="date">
+    <input type="reset">
+    <input type="submit">
+</form>
+</body>
+</html>
